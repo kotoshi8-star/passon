@@ -122,7 +122,7 @@ export default function Home() {
       {/* Social Links */}
       <div className="flex justify-center gap-2.5 pb-4">
         <a
-          href="https://instagram.com"
+          href="https://www.instagram.com/passon_students/?hl=ja"
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center gap-2 px-4 py-2 bg-background text-foreground rounded-full text-xs font-medium border border-border/60 shadow-[0_8px_16px_rgba(80,60,50,0.08)] hover:border-primary/30 hover:bg-card active:scale-[0.98] transition-all duration-200"
@@ -133,7 +133,7 @@ export default function Home() {
           Instagram
         </a>
         <a
-          href="https://line.me"
+          href="https://page.line.me/012kmgoz"
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center gap-2 px-4 py-2 bg-background text-foreground rounded-full text-xs font-medium border border-border/60 shadow-[0_8px_16px_rgba(80,60,50,0.08)] hover:border-primary/30 hover:bg-card active:scale-[0.98] transition-all duration-200"

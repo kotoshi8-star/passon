@@ -138,14 +138,6 @@ export default function TermsPage() {
           <div className="pt-4 text-right">
             <p>2026 年 03 月 05 日 制定</p>
           </div>
-
-          <div className="mt-12 pt-8 border-t text-muted-foreground">
-            <p className="text-center font-medium">
-              きっかけづくりの場<br />
-              <br />
-              passonは〜
-            </p>
-          </div>
         </div>
       </ScrollArea>
 
