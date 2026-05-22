@@ -117,11 +117,6 @@ export default function Home() {
             全ては「きっかけ」から始まります。何かの「きっかけ」で、モチベーションが上がり、楽しく前向きに、自ら進んで取り組むようになります。pass onは、そんな「きっかけづくり」の場所を目指します。
           </p>
         </section>
-
-        {/* タグライン */}
-        <p className="text-center text-primary text-sm font-semibold py-0.5 tracking-[0.2em] font-serif animate-fade-in-up animation-delay-300">
-          「なりたい自分に近づく」「なりたい自分を見つける」
-        </p>
       </div>
 
       {/* Social Links */}
@@ -148,7 +143,21 @@ export default function Home() {
           </svg>
           LINE
         </a>
+        <a
+          href="/terms"
+          className="flex items-center gap-2 px-4 py-2 bg-background text-foreground rounded-full text-xs font-medium border border-border/60 shadow-[0_8px_16px_rgba(80,60,50,0.08)] hover:border-primary/30 hover:bg-card active:scale-[0.98] transition-all duration-200"
+        >
+          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+          </svg>
+          利用規約
+        </a>
       </div>
+
+      <p className="w-full flex flex-col items-center justify-center text-center text-sm/relaxed text-muted-foreground mt-2 mb-6">
+        <span>「pass on」は、</span>
+        <span>人生を豊かにする、強みを創る場所</span>
+      </p>
     </main>
   )
 }

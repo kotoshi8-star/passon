@@ -2,34 +2,6 @@ import Image from "next/image"
 import Link from "next/link"
 
 export default function ApplicationPage() {
-  const steps = [
-    {
-      number: "01",
-      title: "お問い合わせ",
-      description: "LINE または Instagram からお気軽にご連絡ください。ご質問やご相談も承ります。"
-    },
-    {
-      number: "02", 
-      title: "無料カウンセリング",
-      description: "お子様の目標や現状、希望する指導内容についてヒアリングいたします。"
-    },
-    {
-      number: "03",
-      title: "講師マッチング",
-      description: "お子様に最適な講師をご提案いたします。"
-    },
-    {
-      number: "04",
-      title: "体験レッスン",
-      description: "実際のレッスンを体験していただき、講師との相性をご確認ください。"
-    },
-    {
-      number: "05",
-      title: "ご契約・レッスン開始",
-      description: "ご納得いただけましたら、正式にご契約となります。"
-    }
-  ]
-
   return (
     <main className="min-h-screen bg-background">
       {/* Header */}
@@ -46,51 +18,121 @@ export default function ApplicationPage() {
       </header>
 
       <div className="max-w-3xl mx-auto px-6 py-12">
-        <h1 className="text-2xl md:text-3xl font-bold text-primary mb-8 text-center">
-          申込方法
+        <h1 className="text-2xl md:text-3xl font-bold text-primary mb-12 text-center">
+          ご利用案内
         </h1>
 
-        <div className="space-y-6">
-          {steps.map((step) => (
-            <div key={step.number} className="bg-card rounded-xl p-6 shadow-sm border border-border flex gap-4">
-              <div className="flex-shrink-0 w-12 h-12 bg-primary text-primary-foreground rounded-full flex items-center justify-center font-bold">
-                {step.number}
-              </div>
+        {/* 予約方法 */}
+        <section className="mb-12">
+          <h2 className="text-xl font-bold text-center border-b-2 border-primary/20 pb-2 mb-6">
+            予約方法
+          </h2>
+          <div className="bg-card rounded-xl p-6 shadow-sm border border-border space-y-6">
+            <div className="bg-muted p-3 text-center rounded text-foreground font-medium mb-4">
+              LINEで行います
+            </div>
+            
+            <div className="space-y-4">
               <div>
-                <h3 className="font-bold text-foreground mb-2">{step.title}</h3>
-                <p className="text-muted-foreground text-sm">{step.description}</p>
+                <p className="font-bold mb-2">① 公式LINEのリンクから、友だち追加をしてください。</p>
+                <div className="bg-primary/5 p-4 rounded-lg flex flex-col items-center justify-center border border-primary/10 my-4">
+                  <a href="https://line.me/R/ti/p/@012kmgoz" target="_blank" rel="noopener noreferrer" className="text-primary font-medium hover:underline flex items-center gap-2">
+                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M19.365 9.863c..."/>
+                    </svg>
+                    page.line.me/012kmgoz
+                  </a>
+                  <p className="text-xs text-muted-foreground mt-2">↑ まずはクリック!!</p>
+                </div>
+              </div>
+              
+              <div>
+                <p className="font-bold mb-2">② お名前・ご希望の講師・日時・科目等を「pass on」公式LINEに送信してください。</p>
+                <p className="text-sm text-muted-foreground mt-2">
+                  ※ご質問も公式LINEで受け付けております。<br />
+                  気になることがございましたらお気軽にお問い合わせください。
+                </p>
               </div>
             </div>
-          ))}
-        </div>
 
-        <div className="mt-10 bg-primary text-primary-foreground rounded-xl p-6 text-center">
-          <p className="mb-4 font-medium">まずはお気軽にお問い合わせください</p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <a
-              href="https://instagram.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-primary-foreground text-primary rounded-full font-medium hover:opacity-90 transition-opacity"
-            >
-              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-              </svg>
-              Instagram
-            </a>
-            <a
-              href="https://line.me"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-primary-foreground text-primary rounded-full font-medium hover:opacity-90 transition-opacity"
-            >
-              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/>
-              </svg>
-              LINE
-            </a>
+            <div className="bg-primary/10 p-3 text-center rounded text-primary font-bold mt-6">
+              講師と調整後、速やかにご返信させて頂きます
+            </div>
           </div>
-        </div>
+        </section>
+
+        {/* 受講方法 */}
+        <section className="mb-12">
+          <h2 className="text-xl font-bold text-center border-b-2 border-primary/20 pb-2 mb-6">
+            受講方法
+          </h2>
+          <div className="bg-card rounded-xl p-6 shadow-sm border border-border space-y-6">
+            <div className="bg-muted p-3 text-center rounded text-foreground font-medium mb-4">
+              Zoomで行います
+            </div>
+            
+            <div className="space-y-4">
+              <div>
+                <p className="font-bold mb-2">① 受講前までにLINEでZoomのリンクを送信します。</p>
+                <p className="text-sm text-muted-foreground">
+                  ※Zoomアプリを事前にインストールし、<br />
+                  マイク・ビデオ機能が正常に作動するかご確認ください。
+                </p>
+              </div>
+              
+              <div className="pt-4">
+                <p className="font-bold mb-2">② 受講開始時刻になりましたら、お送りしたリンクからZoomアプリを開き、ミーティングにご参加ください。</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* 料金 */}
+        <section className="mb-12">
+          <h2 className="text-xl font-bold text-center border-b-2 border-primary/20 pb-2 mb-6">
+            料金
+          </h2>
+          <div className="bg-[#782828] text-white rounded-xl p-8 shadow-sm text-center">
+            <h3 className="text-2xl md:text-3xl font-bold mb-6 tracking-wide">
+              1コマ(25分) 2,500円<span className="text-lg font-normal"> (税込み)</span>
+            </h3>
+            
+            <p className="text-lg mb-8 font-medium">
+              お支払い方法 : 後払い (銀行振込)
+            </p>
+            
+            <div className="text-sm text-left text-white/90 space-y-2 border-t border-white/20 pt-6">
+              <p>＊受講月の翌月3日までに、指定口座へお振込みください。</p>
+              <p>　振込手数料はお客様のご負担にてお願い申し上げます。</p>
+              <p>　(例) 3月15日に受講された場合、4月3日までにお振込みください。</p>
+            </div>
+          </div>
+        </section>
+
+        {/* キャンセル */}
+        <section className="mb-12">
+          <h2 className="text-xl font-bold text-center border-b-2 border-primary/20 pb-2 mb-6">
+            キャンセル
+          </h2>
+          <div className="bg-[#782828] text-white rounded-xl p-8 shadow-sm border border-dashed border-white/40">
+            <h3 className="text-xl font-bold text-center mb-8">
+              キャンセルのご連絡は【公式LINE】へお送りください
+            </h3>
+            
+            <div className="border rounded-2xl p-6 mb-8 border-white/30 max-w-sm mx-auto">
+              <p className="text-sm text-white/80 mb-4">記載内容</p>
+              <div className="space-y-2 text-lg">
+                <p>件名：キャンセル依頼</p>
+                <p>本文：お名前<span className="text-sm">(予約者様)</span> / 講師名 / 日時 / 科目</p>
+              </div>
+            </div>
+            
+            <div className="text-center font-medium text-lg leading-relaxed">
+              <p>※授業前日17時まで → キャンセル料はございません</p>
+              <p>それ以降 → 授業料金の100%</p>
+            </div>
+          </div>
+        </section>
 
         <div className="mt-8 text-center">
           <Link
